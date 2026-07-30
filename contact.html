@@ -1,6 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<<head>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R2LG2R5G4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5R2LG2R5G4');
+    </script>
+
     <title>Contact | Asma Sistani | Data Analyst & BI Analyst</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,8 +55,8 @@
                 <div class="brand-subtitle">Data Analyst | <br class="mobile-break"> BI Analyst</div>
             </div>
             <div class="social-icons-top">
-                <a href="https://linkedin.com/in/asma-sistani" class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
-                <a href="https://github.com/asma-sistani" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+                <a href="https://linkedin.com/in/asma-sistani" class="fa-brands fa-linkedin track-cta" data-cta="linkedin" data-location="header_social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+                <a href="https://github.com/asma-sistani" class="fa-brands fa-github track-cta" data-cta="github" data-location="header_social" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
             </div>
         </div>
 
@@ -72,11 +82,11 @@
                         <p>I am always interested in discussing data analytics, business intelligence, reporting solutions, and new opportunities.</p>
                         <p>Feel free to connect with me via LinkedIn, GitHub, or email.</p>
                         <div class="footer-links1">
-                            <a href="mailto:asma.sistani@gmail.com">Email</a>
+                            <a href="mailto:asma.sistani@gmail.com" class="track-cta" data-cta="email" data-location="contact_body_text">Email</a>
                             <span>|</span>
-                            <a href="https://linkedin.com/in/asma-sistani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="https://linkedin.com/in/asma-sistani" class="track-cta" data-cta="linkedin" data-location="contact_body_text" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                             <span>|</span>
-                            <a href="https://github.com/asma-sistani" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://github.com/asma-sistani" class="track-cta" data-cta="github" data-location="contact_body_text" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
 
@@ -84,14 +94,14 @@
                         <div class="contact-card">
                             <p>Connect with me on</p>
                             <div class="contact-icons">
-                                <a href="https://linkedin.com/in/asma-sistani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <a href="https://linkedin.com/in/asma-sistani" class="track-cta" data-cta="linkedin" data-location="contact_card" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                     <i class="fa-brands fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/asma-sistani" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <a href="https://github.com/asma-sistani" class="track-cta" data-cta="github" data-location="contact_card" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
                             </div>
-                            <p><a href="mailto:asma.sistani@gmail.com" class="email-link">asma.sistani@gmail.com</a></p>
+                            <p><a href="mailto:asma.sistani@gmail.com" class="email-link track-cta" data-cta="email" data-location="contact_card">asma.sistani@gmail.com</a></p>
                             <p>Kerman, Iran</p>
                         </div>
                     </div>
@@ -107,10 +117,10 @@
                 <div class="footer-role">Data Analyst | BI Analyst</div>
                 <div class="footer-location">Kerman, Iran</div>
                 <div class="footer-links">
-                    <a href="mailto:asma.sistani@gmail.com">Email</a> | 
-                    <a href="https://linkedin.com/in/asma-sistani" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-                    <a href="https://github.com/asma-sistani" target="_blank" rel="noopener noreferrer">GitHub</a> |
-                    <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="mailto:asma.sistani@gmail.com" class="track-cta" data-cta="email" data-location="footer">Email</a> | 
+                    <a href="https://linkedin.com/in/asma-sistani" class="track-cta" data-cta="linkedin" data-location="footer" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                    <a href="https://github.com/asma-sistani" class="track-cta" data-cta="github" data-location="footer" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                    <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume track-cta" data-cta="resume_en" data-location="footer" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
             <div class="footer-right">
@@ -120,6 +130,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -127,5 +138,20 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- GA4 Click Event Tracking -->
+    <script>
+      document.querySelectorAll('a.track-cta').forEach(a => {
+        a.addEventListener('click', function () {
+          if (typeof gtag !== 'function') return;
+
+          gtag('event', 'cta_click', {
+            cta_type: a.dataset.cta || 'unknown',
+            cta_location: a.dataset.location || 'unknown',
+            link_url: a.href
+          });
+        });
+      });
+    </script>
 </body>
 </html>
