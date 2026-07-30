@@ -1,6 +1,16 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R2LG2R5G4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5R2LG2R5G4');
+    </script>
+
     <title>Resume | Asma Sistani | Data Analyst & BI Specialist</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,8 +62,8 @@
                 <div class="brand-subtitle">Data Analyst |<br class="mobile-break"> BI Analyst</div>
             </div>
             <div class="social-icons-top">
-                <a href="https://linkedin.com/in/asma-sistani" class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
-                <a href="https://github.com/asma-sistani" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+                <a href="https://linkedin.com/in/asma-sistani" class="fa-brands fa-linkedin track-cta" data-cta="linkedin" data-location="header_social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+                <a href="https://github.com/asma-sistani" class="fa-brands fa-github track-cta" data-cta="github" data-location="header_social" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
             </div>
         </div>
 
@@ -77,11 +87,13 @@
                 <div class="resume-content">
                     <p>Explore my professional experience, technical skills, and career background through my resume.</p>
                     <div class="resume-buttons">
-                        <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">
+                        <!-- ردیابی دانلود رزومه انگلیسی -->
+                        <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume track-cta" data-cta="resume_en" data-location="resume_page_body" target="_blank" rel="noopener noreferrer">
                             <i class="fa-solid fa-file-pdf"></i> Download English CV
                         </a>
                         
-                        <a href="assets/pdf/ASMA_SISTANI_CV_FA.pdf" class="btn-resume btn-fa" target="_blank" rel="noopener noreferrer">
+                        <!-- ردیابی دانلود رزومه فارسی -->
+                        <a href="assets/pdf/ASMA_SISTANI_CV_FA.pdf" class="btn-resume btn-fa track-cta" data-cta="resume_fa" data-location="resume_page_body" target="_blank" rel="noopener noreferrer">
                             <i class="fa-solid fa-file-pdf"></i> Download Persian CV
                         </a>
                     </div>
@@ -106,10 +118,10 @@
                 <div class="footer-role">Data Analyst | BI Analyst</div>
                 <div class="footer-location">Kerman, Iran</div>
                 <div class="footer-links">
-                    <a href="mailto:asma.sistani@gmail.com">Email</a> | 
-                    <a href="https://linkedin.com/in/asma-sistani" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-                    <a href="https://github.com/asma-sistani" target="_blank" rel="noopener noreferrer">GitHub</a> |
-                    <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="mailto:asma.sistani@gmail.com" class="track-cta" data-cta="email" data-location="footer">Email</a> | 
+                    <a href="https://linkedin.com/in/asma-sistani" class="track-cta" data-cta="linkedin" data-location="footer" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                    <a href="https://github.com/asma-sistani" class="track-cta" data-cta="github" data-location="footer" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                    <a href="assets/pdf/ASMA_SISTANI_CV_EN.pdf" class="btn-resume track-cta" data-cta="resume_en" data-location="footer" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
             <div class="footer-right">
@@ -127,5 +139,20 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- GA4 Click Event Tracking -->
+    <script>
+      document.querySelectorAll('a.track-cta').forEach(a => {
+        a.addEventListener('click', function () {
+          if (typeof gtag !== 'function') return;
+
+          gtag('event', 'cta_click', {
+            cta_type: a.dataset.cta || 'unknown',
+            cta_location: a.dataset.location || 'unknown',
+            link_url: a.href
+          });
+        });
+      });
+    </script>
 </body>
 </html>
